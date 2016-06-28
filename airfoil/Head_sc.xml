@@ -1,0 +1,19 @@
+<head>
+<specific_model>0</specific_model>
+<!-- 0: Classical -->
+<!-- 1: Shear refined -->
+<!-- 2: Vlasov -->
+<!-- 3: Trapeze -->
+<analysis>0</analysis>
+<!-- 0: Elastic -->
+<!-- 1: Thermoelastic -->
+<!-- 2: Conduction -->
+<!-- 3: Piezoelectric/Piezomagnetic -->
+<!-- 4: ThermoPiezoelectric/Thermopiezomagnetic -->
+<!-- 5: Piezoelectromagnetic -->
+<!-- 6: Thermopiezoelectromagnetic -->
+<elem_flag>0</elem_flag>
+<trans_flag>1</trans_flag>
+<k>0.0  0.0  0.0</k>
+<cos>1.0  0.0</cos>
+</head>

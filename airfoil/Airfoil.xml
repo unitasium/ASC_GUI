@@ -1,0 +1,9 @@
+<project type="airfoil">
+<shapes>Shapes</shapes>
+<materials>Materials</materials>
+<layups>Layups</layups>
+<pitch_axis_yz>0.4750054  0.0</pitch_axis_yz>
+<twisted_angle>0.0</twisted_angle>
+<chord_length>1.89999874</chord_length>
+<flip>No</flip>
+</project>
