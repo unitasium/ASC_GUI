@@ -85,6 +85,11 @@ def homogenization(
             )  # ,nlayer
 
     elif model_source == 2:
+        if w == '':
+            w = 1.0
+        else:
+            w = float(w)
+        
         [sc_input, macro_model_dim] = convert2sc(
             abaqus_input, new_filename, macro_model, specific_model,
             analysis, elem_flag, trans_flag, temp_flag,

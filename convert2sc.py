@@ -334,6 +334,7 @@ def convert2sc(abq_input, new_filename, macro_model, specific_model,
     with codecs.open(out_file_name, encoding = 'utf-8', mode = 'w') as fout:
         nnode = len(n_coord)
         nelem = len(e_connt)
+        # print 'Writing macroscopic arguments...'
         if macro_model == 1:
             writeFormat(fout, 'd', [specific_model])
             fout.write('\n')
@@ -346,11 +347,13 @@ def convert2sc(abq_input, new_filename, macro_model, specific_model,
             fout.write('\n')
             writeFormat(fout, 'EE', sk)
             fout.write('\n')
+        # print 'Writing flags...'
         writeFormat(fout, 'd'*4, [analysis, elem_flag, trans_flag, temp_flag])
         fout.write('\n')
         writeFormat(fout, 'd'*6, [nsg, nnode, nelem, nmate, nslave, nlayer])
         fout.write('\n')
     
+        # print 'Writing nodal coordinates...'
         for n in n_coord:
             if nsg == 1:
                 writeFormat(fout, 'dE', [n[0], n[i3]])
@@ -360,12 +363,14 @@ def convert2sc(abq_input, new_filename, macro_model, specific_model,
                 writeFormat(fout, 'dEEE', [n[0], n[i1], n[i2], n[i3]])
         fout.write('\n')
     
+        # print 'Writing element connectivities...'
         for k, v in e_connt.items():
             e = [int(k),] + v
             writeFormat(fout, 'd'*11, e)
         fout.write('\n')
     
         if trans_flag == 1:
+            # print 'Writing local coordinates...'
             for e in e_list:
                 a = [1.0, 0.0, 0.0]
                 b = [0.0, 1.0, 0.0]
@@ -374,7 +379,8 @@ def convert2sc(abq_input, new_filename, macro_model, specific_model,
             for e, abc in distr_list.items():
                 writeFormat(fout, 'd'+'E'*9, [int(e)]+abc)
         fout.write('\n')
-            
+        
+        # print 'Writing layer types...'
         if nlayer != 0:
             for v in layer_type.values():
                 mn = v[1]
@@ -383,8 +389,10 @@ def convert2sc(abq_input, new_filename, macro_model, specific_model,
                 writeFormat(fout, 'ddE', v)
             fout.write('\n')
         
+        # print 'Writing materials...'
         if nmate != 0:
             for i in material.values():
+                # print i
                 writeFormat(fout, 'ddd', [i[0], i[2], 1])
                 writeFormat(fout, 'EE', [20.0, i[1]])
                 if i[2] == 0:  # isotropic

@@ -157,9 +157,11 @@ def setViewYZ(vp=None, nsg=3, obj=None, clr=None):
         vp.view.setViewpoint(viewVector=(1.0, 0.8, 0.6),
                              cameraUpVector=(0.0, 0.0, 1.0))
     if clr is not None:
-        cmap = vp.colorMappings['Material']
+        vp.enableMultipleColors()
+        vp.setColor(initialColor='#BDBDBD')
+        cmap = vp.colorMappings[clr]
         vp.setColor(colorMapping=cmap)
         vp.disableMultipleColors()
     vp.view.fitView()
     
-    return 1
+    return vp

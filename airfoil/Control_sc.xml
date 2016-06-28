@@ -1,0 +1,6 @@
+<control>
+<name>test_0628</name>
+<head>C:\Users\tian50\Documents\Abaqus\Python\Abaqus_SwiftComp_GUI_0627\airfoil\Head_sc.xml</head>
+<airfoil>C:\Users\tian50\Documents\Abaqus\Python\Abaqus_SwiftComp_GUI_0627\airfoil\Airfoil.xml</airfoil>
+<input_only>1</input_only>
+</control>

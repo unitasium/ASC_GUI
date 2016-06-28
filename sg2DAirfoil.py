@@ -1422,18 +1422,17 @@ def createAirfoil(project_name, control_file):
     # Set view
     # =======================================================================
     if tnt == 'all':
-        
+
         p = model.parts[pa_name]
-        setView(p)
-        cvp = session.viewports[session.currentViewportName]
-        cvp.partDisplay.setValues(mesh = ON)
-        cvp.partDisplay.meshOptions.setValues(meshTechnique = ON)
-        cvp.enableMultipleColors()
-        cvp.setColor(initialColor = '#BDBDBD')
-        cmap = cvp.colorMappings['Section']
-        cvp.setColor(colorMapping = cmap)
-        cvp.disableMultipleColors()
-        
+        vp = setViewYZ(nsg=2, obj=p, clr='Section')
+        # cvp = session.viewports[session.currentViewportName]
+        vp.partDisplay.setValues(mesh = ON)
+        vp.partDisplay.meshOptions.setValues(meshTechnique = ON)
+        # cvp.enableMultipleColors()
+        # cvp.setColor(initialColor = '#BDBDBD')
+        # cmap = cvp.colorMappings['Section']
+        # cvp.setColor(colorMapping = cmap)
+        # cvp.disableMultipleColors()
     
     mdb.saveAs(pathName = cae_name)
     
@@ -1447,6 +1446,8 @@ def createAirfoil(project_name, control_file):
     
     f_debug.close()
     f_log.close()
+
+    return abq_input
     
 def createPartYZ(model_name, part_name):
     

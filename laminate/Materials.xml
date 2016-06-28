@@ -1,0 +1,80 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<materials>
+	<material type = "ENGINEERING CONSTANTS">
+		<id>1</id>
+		<name>iso5_1</name>
+		<density>1.860000E+03</density>
+		<e1>3.7000E+10</e1>
+		<e2>9.0000E+09</e2>
+		<e3>9.0000E+09</e3>
+		<g12>4.0000E+09</g12>
+		<g13>4.0000E+09</g13>
+		<g23>4.0000E+09</g23>
+		<nu12>0.28</nu12>
+		<nu13>0.28</nu13>
+		<nu23>0.28</nu23>
+	</material>
+	<material type = "ENGINEERING CONSTANTS">
+		<id>2</id>
+		<name>iso5_2</name>
+		<density>1.830000E+03</density>
+		<e1>1.0300E+10</e1>
+		<e2>1.0300E+10</e2>
+		<e3>1.0300E+10</e3>
+		<g12>8.0000E+09</g12>
+		<g13>8.0000E+09</g13>
+		<g23>8.0000E+09</g23>
+		<nu12>0.30</nu12>
+		<nu13>0.30</nu13>
+		<nu23>0.30</nu23>
+	</material>
+	<material type = "ENGINEERING CONSTANTS">
+		<id>3</id>
+		<name>iso5_3</name>
+		<density>1.830000E+03</density>
+		<e1>1.0000E+01</e1>
+		<e2>1.0000E+01</e2>
+		<e3>1.0000E+01</e3>
+		<g12>1.0000E+00</g12>
+		<g13>1.0000E+00</g13>
+		<g23>1.0000E+00</g23>
+		<nu12>0.30</nu12>
+		<nu13>0.30</nu13>
+		<nu23>0.30</nu23>
+	</material>
+	<material type = "ENGINEERING CONSTANTS">
+		<id>4</id>
+		<name>iso5_4</name>
+		<density>1.664000E+03</density>
+		<e1>1.0300E+10</e1>
+		<e2>1.0300E+10</e2>
+		<e3>1.0300E+10</e3>
+		<g12>8.0000E+09</g12>
+		<g13>8.0000E+09</g13>
+		<g23>8.0000E+09</g23>
+		<nu12>0.30</nu12>
+		<nu13>0.30</nu13>
+		<nu23>0.30</nu23>
+	</material>
+	<material type = "ENGINEERING CONSTANTS">
+		<id>5</id>
+		<name>iso5_5</name>
+		<density>1.280000E+02</density>
+		<e1>1.0000E+07</e1>
+		<e2>1.0000E+07</e2>
+		<e3>1.0000E+07</e3>
+		<g12>2.0000E+05</g12>
+		<g13>2.0000E+05</g13>
+		<g23>2.0000E+05</g23>
+		<nu12>0.30</nu12>
+		<nu13>0.30</nu13>
+		<nu23>0.30</nu23>
+	</material>
+	<material type = "ISOTROPIC">
+		<id>6</id>
+		<name>foam</name>
+		<density>160</density>
+		<e>72.400E+09</e>
+		<nu>0.3</nu>
+	</material>
+</materials>

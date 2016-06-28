@@ -20,6 +20,7 @@ from scHomoForm import HomoForm
 from scMacroForm import MacroForm
 from scLocalForm import LocalForm
 from scVisualForm import VisualForm
+from vabsForm import VabsForm
 import os
 
 thisPath = os.path.abspath(__file__)
@@ -147,12 +148,24 @@ class SCToolsetGui(AFXToolsetGui):
                       icon  = ic, 
                       tgt   = VisualForm(self), 
                       sel   = AFXMode.ID_ACTIVATE)
+                      
+        FXVerticalSeparator(p=toolbar_group_1, x=0, y=0, w=0, h=0, pl=2, pr=2, pt=2, pb=2)
+        
+        ic = afxCreateIcon(os.path.join(thisDir, 'vabs_small.png'))
+        AFXToolButton(p     = toolbar_group_1, 
+                      label = '\tVABS', 
+                      icon  = ic, 
+                      tgt   = VabsForm(self), 
+                      sel   = AFXMode.ID_ACTIVATE)
 
     def getKernelInitializationCommand(self):
         
         h = 'import'
-        h += ' userDataSG, scHomoMain, scMacroMat, scLocalMain, scVisualMain, workplaneMain, layupsMain'
-        h += ', sg1DMain, sg2DV5Main, sg2DLaminateMain, sg2DLaminateErase, sg2DReadFileMain, node9, sg3DV5Main'
+        h += ' userDataSG, scHomoMain, scMacroMat, scLocalMain'
+        h += ', scVisualMain, workplaneMain, layupsMain'
+        h += ', sg1DMain, sg2DV5Main, sg2DLaminateMain'
+        h += ', sg2DLaminateErase, sg2DReadFileMain, node9, sg3DV5Main'
+        h += ', vabsMain'
 
         return h
         

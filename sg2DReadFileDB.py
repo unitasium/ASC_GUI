@@ -29,14 +29,14 @@ class SG2DReadFileDB(AFXDataDialog):
         VAligner_1 = AFXVerticalAligner(p=self, opts=0, x=0, y=0, w=0, h=0,
             pl=0, pr=0, pt=0, pb=0)
         AFXTextField(p=VAligner_1, ncols=32, labelText='Project name: ', tgt=form.project_nameKw, sel=0)
-        fileHandler = PsaDBFileHandler(form, 'profile_name', 'Control file (*control*.xml)')
+        fileHandler = PsaDBFileHandler(form, 'profile_name', 'Airfoil main file (*.xml)')
         fileTextHf = FXHorizontalFrame(p=VAligner_1, opts=0, x=0, y=0, w=0, h=0,
             pl=0, pr=0, pt=0, pb=0, hs=DEFAULT_SPACING, vs=DEFAULT_SPACING)
         # Note: Set the selector to indicate that this widget should not be
         #       colored differently from its parent when the 'Color layout managers'
         #       button is checked in the RSG Dialog Builder dialog.
         fileTextHf.setSelector(99)
-        AFXTextField(p=fileTextHf, ncols=32, labelText='Control file: ', tgt=form.profile_nameKw, sel=0,
+        AFXTextField(p=fileTextHf, ncols=32, labelText='Airfoil main file: ', tgt=form.profile_nameKw, sel=0,
             opts=AFXTEXTFIELD_STRING|LAYOUT_CENTER_Y)
         icon = afxGetIcon('fileOpen', AFX_ICON_SMALL )
         FXButton(p=fileTextHf, text='	Select File\nFrom Dialog', ic=icon, tgt=fileHandler, sel=AFXMode.ID_ACTIVATE,
